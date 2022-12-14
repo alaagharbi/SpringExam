@@ -57,10 +57,10 @@ public class ExamRestController {
     }
     @GetMapping({"/affecterUtilisateurClasse/{idUtilisateur}/{codeClasse}"})
     public void assignProjectToUser(@PathVariable int projectId, @PathVariable int userId) {
-        Project project = (Project) this.projectRepository.findById(projectId);
-        User user = (User)this.userRepository.findById(userId);
-        user.setProjects(user);
-        projectRepository.save(project);
+        Project project = projectRepository.findById(projectId);
+        User user = userRepository.findById(userId);
+        user.setProjects(project);
+        userRepository.save(user);
     }
     //http://localhost:9090/rest/getContratBf/{id}
     @GetMapping("/getproject")

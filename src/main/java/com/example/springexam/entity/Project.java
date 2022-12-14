@@ -14,7 +14,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Project {
+public class Project extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int id;
