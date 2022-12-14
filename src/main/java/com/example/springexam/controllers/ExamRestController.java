@@ -47,7 +47,7 @@ public class ExamRestController {
         return	sprintRepository.save(entity);
     }
 
-    //http://localhost:9090/rest/add-Beneficiaire
+    //http://localhost:9090/rest/add-Project
     @PostMapping("/add-Project")
     public Project addProject(@RequestBody Project entity) {
         return	projectRepository.save(entity);
