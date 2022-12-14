@@ -34,14 +34,14 @@ public class ExamRestController {
 //        return	contratRepository.save(entity);
 //    }
 
-    //http://localhost:9090/rest/add-Beneficiaire
+    //http://localhost:9090/rest/add-User
     @PostMapping("/add-User")
     public User addUser(@RequestBody User entity) {
         return	userRepository.save(entity);
     }
 
 
-    //http://localhost:9090/rest/add-Beneficiaire
+    //http://localhost:9090/rest/add-Sprint
     @PostMapping("/add-Sprint")
     public Sprint addSprint(@RequestBody Sprint entity) {
         return	sprintRepository.save(entity);
