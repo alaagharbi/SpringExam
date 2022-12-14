@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("rest")
@@ -58,6 +61,16 @@ public class ExamRestController {
         User user = (User)this.userRepository.findById(userId);
         user.setProjects(user);
         projectRepository.save(project);
+    }
+    //http://localhost:9090/rest/getContratBf/{id}
+    @GetMapping("/getproject")
+    public List<Project> getProjectBf() {
+        //using JPQL
+        return	projectRepository.getAll();
+        //using SQL
+//		return	contratRepository.getContratBf(idBf);
+
+
     }
 //    //http://localhost:9090/rest/add-Assurance/{cinBf}
 //    @PostMapping("/add-Assurance/{cinBf}")
